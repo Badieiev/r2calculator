@@ -7,34 +7,37 @@
 #main {
 	position: relative;	
 	width: 900px;
-	border: 2px solid black;
+	border: 1px solid black;
 	margin-left: 50px;
 	height: 600px;
 }
 #main div { position: absolute; }
 #col1 {
-	width: 33%;
+	left: 2%;
+	width: 30%;
 	height: 600px;
-	border: 1px solid black;
-	background: green;
+	border: 1px solid black;	
 }
 #col2 {
-	left: 33%; 
-	width: 34%;
+	left: 35%; 
+	width: 30%;
 	height: 600px;
-	border: 1px solid black;
-	background: red;
+	border: 1px solid black;		
 }
 #col3 {
-	right: 0;
-	width: 33%;
-	height: 600px;
-	background: blue;
+	right: 2%;
+	width: 30%;
+	height: 600px;	
+	border: 1px solid black;
 }
 .text-wrapper{
-	border: 1px solid black;
-	width: 300px;
-	}
+	margin: 0px auto;
+	border-bottom: 1px solid black;	
+	width: 100%;
+}
+.text-wrapper p {
+	text-align: center;
+}
 </style>
 
 </head>
@@ -56,6 +59,17 @@
 </div>
 <script>
 
+ var col1 = document.getElementById("col1");
+ var col2 = document.getElementById("col3");
+ var col3 = document.getElementById("col3");
+ 
+ var cell = document.createElement("div");
+ var cellText = document.createTextNode("Hello!");
+ 
+ cell.appendChild(cellText);
+ col1.appendChild(cell);
+ 
+ 
 </script>
 </body>
 </html>
