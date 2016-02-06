@@ -4,10 +4,33 @@
 
 <style>
 #main {
+position: relative;
 	width: 1000px;
 	height: 600px;
 	border: 2px solid black;
 	margin-left: 100px;
+}
+#main div { position: absolute; }
+#col1 {
+position: absolute;
+	width: 33%;
+	height: 600px;
+	border: 1px solid black;
+	background: green;
+}
+#col2 {
+position: absolute;
+	left: 33%; 
+	width: 34%;
+	height: 600px
+	border: 1px solid black;
+	background: red;
+}
+col3 {
+	position: absolute;
+	right: 0;
+	width: 33%;
+	background: blue;
 }
 </style>
 
@@ -15,6 +38,12 @@
 
 <body>
 <div id="main">
+<div id="col1"> 
+</div>
+<div id="col2"> 
+</div>
+<div id="col3"> 
+</div>
 </div>
 </body>
 </html>
