@@ -6,6 +6,7 @@
 <style>
 #main {
 	position: relative;	
+	width: 900px;
 	border: 2px solid black;
 	margin-left: 50px;
 	height: 600px;
@@ -21,7 +22,6 @@
 	left: 33%; 
 	width: 34%;
 	height: 600px;
-	height: 600px
 	border: 1px solid black;
 	background: red;
 }
@@ -31,6 +31,10 @@
 	height: 600px;
 	background: blue;
 }
+.text-wrapper{
+	border: 1px solid black;
+	width: 300px;
+	}
 </style>
 
 </head>
@@ -39,16 +43,19 @@
 <div id="main">
 
 	<div id="col1"> 
-		<h1>Базовое дерево</h1>
+		<div class="text-wrapper"><p>Базовое дерево</p></div> 
 	</div>
 	
 	<div id="col2"> 
-		<h1>Дерево атаки</h1>
+		<div class="text-wrapper"><p>Дерево атаки</p></div>
 	</div>
 	
 	<div id="col3"> 
-		<h1>Дерево защиты</h1>
+		<div class="text-wrapper"><p>Дерево защиты</p></div>
 	</div>
 </div>
+<script>
+
+</script>
 </body>
 </html>
