@@ -9,25 +9,25 @@
 	width: 900px;
 	border: 1px solid black;
 	margin-left: 50px;
-	height: 600px;
+	height: 500px;
 }
 #main div { position: absolute; }
 #col1 {
 	left: 2%;
 	width: 30%;
-	height: 600px;
+	height: 500px;
 	border: 1px solid black;	
 }
 #col2 {
 	left: 35%; 
 	width: 30%;
-	height: 600px;
+	height: 500px;
 	border: 1px solid black;		
 }
 #col3 {
 	right: 2%;
 	width: 30%;
-	height: 600px;	
+	height: 500px;
 	border: 1px solid black;
 }
 .text-wrapper{
@@ -38,6 +38,17 @@
 .text-wrapper p {
 	text-align: center;
 }
+#table1
+{
+	border: 2px solid red ;
+	margin-top: 53px;
+}
+	td
+	{
+		width: 60px;
+		height: 60px;
+		border: 1px solid black;
+	}
 </style>
 
 </head>
@@ -46,7 +57,10 @@
 <div id="main">
 
 	<div id="col1"> 
-		<div class="text-wrapper"><p>Базовое дерево</p></div> 
+		<div class="text-wrapper"><p>Базовое дерево</p></div>
+		<table id="table1">
+
+		</table>
 	</div>
 	
 	<div id="col2"> 
@@ -58,7 +72,28 @@
 	</div>
 </div>
 <script>
+	function populateTable(table)
+	{
+		var rows = 7;
+		var cols = 4;
+		for (var row = 0 ; row < rows; row ++)
+		{
+			var tableRow = document.createElement("tr");
+			table.appendChild(tableRow);
 
+			for (var col = 0 ; col < cols; col ++)
+			{
+				var tableCell = document.createElement("td");
+				tableRow.appendChild(tableCell)
+				var cellText = document.createTextNode(Math.floor(Math.sqrt(row*col)));
+				tableCell.appendChild(cellText)
+			}
+		}
+	}
+	var table = document.getElementById("table1") // находим table1
+	populateTable(table);
+
+/*
  var col1 = document.getElementById("col1");
  var col2 = document.getElementById("col3");
  var col3 = document.getElementById("col3");
@@ -68,7 +103,7 @@
  
  cell.appendChild(cellText);
  col1.appendChild(cell);
- 
+ */
  
 </script>
 </body>
